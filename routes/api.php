@@ -11,7 +11,7 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('customers', CustomerController::class);
+//Route::apiResource('customers', CustomerController::class);
 Route::apiResource('customers', CustomerController::class)->middleware('auth:api');
 //Route::apiresource('items', ItemController::class);
 //Route::apiresource('items', ItemController::class)->middleware('auth:api');
